@@ -1,9 +1,10 @@
 import React from "react";
-import "./LoginForm.css";
+import { Link } from "react-router-dom";
+import "./LoginPage.css";
 import { FaUser } from "react-icons/fa6";
 import { IoMdLock } from "react-icons/io";
 
-const LoginForm = () => {
+const LoginPage = () => {
   return (
     <div className="wrapper">
       <h1>Image Gallery App</h1>
@@ -31,7 +32,11 @@ const LoginForm = () => {
 
         <div className="register-link">
           <p>
-            New to this platform? <a href="#">Register</a> Here
+            New to this platform?{" "}
+            <Link to="/Register" className="register-page">
+              Register
+            </Link>{" "}
+            Here
           </p>
         </div>
       </form>
@@ -39,4 +44,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default LoginPage;
